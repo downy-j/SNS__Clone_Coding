@@ -12,14 +12,16 @@ function Post({ user, postImage, likes, timestamp }) {
     <div className="post">
       <div className="post__header">
         <div className="post__headerAuthor">
-          <Avatar>{user.charAt(0).toUpperCase()}</Avatar>
+          <Avatar style={{ marginRight: "10px" }}>
+            {user.charAt(0).toUpperCase()}
+          </Avatar>
           {user} • <span>{timestamp}</span>
         </div>
         <MoreHorizIcon />
       </div>
 
       <div className="post__image">
-        <img src={postImage} alt="" />
+        <img src={postImage} alt="Post Image" />
       </div>
 
       <div className="post__footer">
